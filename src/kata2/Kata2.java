@@ -7,14 +7,14 @@ import java.util.Map;
 public class Kata2 {
 
     public static void main(String[] args) {
-        Integer [] data = {1, 6, 2, 8, 3, 8, 2, 7, 3, 4, 2, 9, 0, 6};
+        String [] data = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
         
         HistogramGenerator histogramGenerator = new HistogramGenerator(data);
-        Map<Integer, Integer> histogram = histogramGenerator.getHistogram();
+        Map<String, Integer> histogram = histogramGenerator.getHistogram();
         
-        Iterator<Map.Entry<Integer, Integer>> iteratorEntries = histogram.entrySet().iterator();
+        Iterator<Map.Entry<String, Integer>> iteratorEntries = histogram.entrySet().iterator();
         while(iteratorEntries.hasNext()) {
-            Map.Entry<Integer, Integer> entry = iteratorEntries.next();
+            Map.Entry<String, Integer> entry = iteratorEntries.next();
             System.out.println(entry.getKey() + "==>" + entry.getValue());
 
         }
